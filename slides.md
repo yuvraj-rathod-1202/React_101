@@ -1,11 +1,15 @@
 ---
 layout: slides
 title: "React Workshop"
+permalink: /slides/
 ---
 
 # Introduction to React
+<!-- .slide: data-background-color="#3498db" style="color: white;" -->
 
-## Building Modern Web Apps
+Building Modern Web Apps
+
+---
 
 ## React Applications
 - **Mobile Apps, Web Apps, Interactive UI**  
@@ -14,6 +18,7 @@ title: "React Workshop"
 - **Netflix, Uber, Airbnb** → fast, interactive UI  
 - **WhatsApp Web, Discord** → real-time React apps  
 
+---
 
 ## What is React?
 
@@ -22,6 +27,8 @@ title: "React Workshop"
 Think of it like **Lego bricks** for websites. You build small, reusable pieces (**components**) and then assemble them to create a full application.
 
 **It makes building dynamic UIs simple and reusable.**
+
+---
 
 ## How to Set Up React project in your development environment
 
@@ -50,6 +57,8 @@ Think of it like **Lego bricks** for websites. You build small, reusable pieces 
    This will start the development server and open your new React app in the browser.
 
 5. **Edit Your App**: Open the `src/App.js` file in your favorite code editor and start building your React components!
+
+---
 
 ## What are the components in React?
 
@@ -144,6 +153,8 @@ function App() {
 }
 ```
 
+---
+
 ## Props
 
 Props (short for "properties") are a way to pass data from a parent component to a child component in React. They allow you to make your components more dynamic and reusable.
@@ -204,6 +215,8 @@ function App() {
   );
 }
 ```
+
+---
 
 ## conditional Rendering
 
@@ -291,10 +304,14 @@ function App() {
 }
 ```
 
+---
+
 ## States
 
 **State** = A variable that React keeps track of
 When state changes, the component re-renders automatically to show the new value
+
+---
 
 ## **useState** hook for state management
 
@@ -388,6 +405,8 @@ useEffect(() => {
     // Your side effect code here
 }, [dependencies]);
 ```
+
+---
 
 ### Let's get back to the counter example
 
