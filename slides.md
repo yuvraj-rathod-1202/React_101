@@ -1,5 +1,5 @@
 ---
-layout: slides
+layout: default
 title: "React Workshop"
 permalink: /slides/
 ---
