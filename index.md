@@ -9,15 +9,15 @@ permalink: /
 Welcome to the comprehensive introduction to React! This presentation covers everything you need to know to get started with building modern web applications using React.
 
 <div style="display: flex; justify-content: space-around;">
-    <div style="flex: 1; margin: 10px;">
+    <div style="flex: 1; margin: 10px; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
         <h3>Complete Guide</h3>
         <p>From basics to advanced concepts</p>
     </div>
-    <div style="flex: 1; margin: 10px;">
+    <div style="flex: 1; margin: 10px; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
         <h3>Code Examples</h3>
         <p>Practical examples you can try</p>
     </div>
-    <div style="flex: 1; margin: 10px;">
+    <div style="flex: 1; margin: 10px; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
         <h3>Modern Approach</h3>
         <p>Latest React patterns and hooks</p>
     </div>
