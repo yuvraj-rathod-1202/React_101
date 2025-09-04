@@ -1,0 +1,400 @@
+---
+layout: presentation
+title: React 101 - Introduction to React Slides
+---
+
+<section data-background-color="#3498db">
+    <h1 style="color: white;">Introduction to React</h1>
+    <h3 style="color: white;">Building Modern Web Apps</h3>
+</section>
+
+<section>
+    <h2>React Applications</h2>
+    <ul>
+        <li><strong>Mobile Apps, Web Apps, Interactive UI</strong></li>
+        <li><strong>Facebook</strong> → built React itself</li>
+        <li><strong>Instagram</strong> → React Router heavily used</li>
+        <li><strong>Netflix, Uber, Airbnb</strong> → fast, interactive UI</li>
+        <li><strong>WhatsApp Web, Discord</strong> → real-time React apps</li>
+    </ul>
+</section>
+
+<section>
+    <h2>What is React?</h2>
+    <p><strong>React is a JavaScript library for building user interfaces (UIs).</strong></p>
+    <p>Think of it like <strong>Lego bricks</strong> for websites. You build small, reusable pieces (<strong>components</strong>) and then assemble them to create a full application.</p>
+    <p><strong>It makes building dynamic UIs simple and reusable.</strong></p>
+</section>
+
+<section>
+    <h2>How to Set Up React Project</h2>
+    <ol>
+        <li><strong>Install Node.js</strong>: Download from <a href="https://nodejs.org/">nodejs.org</a></li>
+        <li><strong>Create a New React App</strong>:
+            <pre><code class="bash">npx create-react-app my-app</code></pre>
+        </li>
+        <li><strong>Navigate to Project Directory</strong>:
+            <pre><code class="bash">cd my-app</code></pre>
+        </li>
+        <li><strong>Start Development Server</strong>:
+            <pre><code class="bash">npm start</code></pre>
+        </li>
+        <li><strong>Edit Your App</strong>: Open <code>src/App.js</code> and start building!</li>
+    </ol>
+</section>
+
+<section>
+    <h2>What are Components?</h2>
+    <p><strong>Components in React are reusable building blocks of UI, like Lego pieces.</strong></p>
+    <pre><code class="jsx">function WelcomeMessage() { // component of React
+  return &lt;h1&gt;Welcome to React!&lt;/h1&gt;;
+}</code></pre>
+</section>
+
+<section>
+    <h2>Component Example</h2>
+    <pre><code class="jsx">function HelloMessage() { 
+  // name of component should start with an uppercase letter
+  const name = "Yuvraj";
+  return (
+    &lt;&gt;
+      &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+      &lt;p&gt; Nice to meet you!&lt;/p&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
+</section>
+
+<section>
+    <h2>How to Call Components</h2>
+    <pre><code class="jsx">function App() {
+  return (
+    &lt;&gt;
+      &lt;WelcomeMessage&gt;&lt;/WelcomeMessage&gt;
+      &lt;HelloMessage /&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
+</section>
+
+<section>
+    <h2>Import and Export Components</h2>
+    <pre><code class="jsx">import './BestProf.css';
+
+function BestProf() {
+    return &lt;h2 className="best-prof"&gt;Professor Anirban is the best!&lt;/h2&gt;;
+}</code></pre>
+    <pre><code class="css">.best-prof {
+    color: blue;
+    font-weight: bold;
+}</code></pre>
+</section>
+
+<section>
+    <h2>Export Component</h2>
+    <pre><code class="jsx">// BestProf.js
+import './BestProf.css';
+
+export default function BestProf() {
+    return &lt;h2 className="best-prof"&gt;Professor Anirban is the best!&lt;/h2&gt;;
+}</code></pre>
+</section>
+
+<section>
+    <h2>Import Component</h2>
+    <pre><code class="jsx">import BestProf from './BestProf';
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Who is the best professor?&lt;/h1&gt;
+            &lt;BestProf /&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+</section>
+
+<section data-background-color="#e74c3c">
+    <h2 style="color: white;">Props</h2>
+    <p style="color: white;">Props (short for "properties") are a way to pass data from a parent component to a child component in React.</p>
+</section>
+
+<section>
+    <h2>Using Props</h2>
+    <p><strong>1. Passing Props:</strong></p>
+    <pre><code class="jsx">function App() {
+    return (
+        &lt;div&gt;
+            &lt;BestProf name="Anirban" /&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+</section>
+
+<section>
+    <h2>Receiving Props</h2>
+    <p><strong>2. Receiving Props:</strong></p>
+    <pre><code class="jsx">function BestProf(props) {
+    return &lt;h2 className="best-prof"&gt;Professor {props.name} is the best!&lt;/h2&gt;;
+}
+
+// here props is the dictionary which contains 
+// all the props passed to the component</code></pre>
+</section>
+
+<section>
+    <h2>Student ID Card Example</h2>
+    <pre><code class="jsx">function StudentIdCard({ name, RollNo, Branch, Batch }) {
+  return (
+    &lt;div&gt;
+      &lt;h3&gt;Student Name: {name}&lt;/h3&gt;
+      &lt;p&gt;Roll No: {RollNo}&lt;/p&gt;
+      &lt;p&gt;Branch: {Branch}&lt;/p&gt;
+      &lt;p&gt;Batch: {Batch}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+</section>
+
+<section>
+    <h2>Using Student ID Card</h2>
+    <pre><code class="jsx">function App() {
+  let StudentData = {
+    "name": "Yuvraj Rathod",
+    "RollNo": "24110293",
+    "Branch": "AI",
+    "Batch": "2024"
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;StudentIdCard 
+        name={StudentData.name} 
+        RollNo={StudentData.RollNo} 
+        Branch={StudentData.Branch} 
+        Batch={StudentData.Batch} /&gt;
+      {/* OR you can do &lt;StudentIdCard {...StudentData} /&gt; */}
+    &lt;/div&gt;
+  );
+}</code></pre>
+</section>
+
+<section data-background-color="#f39c12">
+    <h2 style="color: white;">Conditional Rendering</h2>
+</section>
+
+<section>
+    <h2>Login Example</h2>
+    <pre><code class="jsx">function Login({ isLoggedin }) {
+    if(isLoggedin) {
+        return &lt;h1&gt;Welcome back!&lt;/h1&gt;;
+    } else {
+        return &lt;h1&gt;Please Sign in.&lt;/h1&gt;;
+    }
+}
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;Login isLoggedin={true} /&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+</section>
+
+<section data-background-color="#9b59b6">
+    <h2 style="color: white;">List Rendering</h2>
+</section>
+
+<section>
+    <h2>Simple List Example</h2>
+    <pre><code class="jsx">function App() {
+    let rollNumbers = ["24110001", "24110002", "24110003", "24110004", "24110005"];
+
+    return (
+        &lt;&gt;
+        {rollNumbers.map((rollNumber) =&gt; (
+            &lt;div key={rollNumber}&gt;{rollNumber}&lt;/div&gt;
+        ))}
+        &lt;/&gt;
+    )
+}</code></pre>
+</section>
+
+<section>
+    <h2>Working with List of Objects</h2>
+    <pre><code class="jsx">function App(){
+    let students = [
+        {"name": "Yuvraj Rathod", "RollNo": "24110293", "Branch": "AI", "Batch": "2024"},
+        {"name": "B", "RollNo": "24110294", "Branch": "CS", "Batch": "2024"},
+        {"name": "C", "RollNo": "24110295", "Branch": "EE", "Batch": "2024"}
+    ];
+
+    return (
+        &lt;&gt;
+        &lt;h1&gt;Student List&lt;/h1&gt;
+        {students.map((student, index) =&gt; (
+            &lt;div key={index}&gt;
+            &lt;h2&gt;Student {index + 1}&lt;/h2&gt;
+            &lt;StudentIdCard {...student} /&gt;
+            &lt;/div&gt;
+        ))}
+        &lt;/&gt;
+    );
+}</code></pre>
+</section>
+
+<section data-background-color="#27ae60">
+    <h2 style="color: white;">Event Handling in React</h2>
+</section>
+
+<section>
+    <h2>Button Click Example</h2>
+    <pre><code class="jsx">function App() {
+    const handleClick = () =&gt; {
+        alert("Button clicked!");
+    };
+
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;Click Me&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+</section>
+
+<section data-background-color="#e67e22">
+    <h2 style="color: white;">States</h2>
+    <p style="color: white;"><strong>State</strong> = A variable that React keeps track of</p>
+    <p style="color: white;">When state changes, the component re-renders automatically to show the new value</p>
+</section>
+
+<section>
+    <h2>useState Hook</h2>
+    <pre><code class="jsx">// To call useState hook you need to import it
+import { useState } from 'react';
+
+// You can declare state variables like this
+const [stateVariable, setStateVariable] = useState(initialValue);
+// stateVariable is the current state value
+// setStateVariable is the function to update the state
+// initialValue is the initial value of the state</code></pre>
+</section>
+
+<section>
+    <h2>Counter Example</h2>
+    <pre><code class="jsx">import React, { useState } from 'react';
+
+function App() {
+    const [count, setCount] = useState(0);
+
+    function changeCountValue(amount){
+        setCount(count + amount);
+    }
+
+    return (
+        &lt;div&gt;
+            &lt;h2&gt;{count}&lt;/h2&gt;
+            &lt;button onClick={() =&gt; changeCountValue(-1)}&gt;Decrement&lt;/button&gt;
+            &lt;button onClick={() =&gt; changeCountValue(1)}&gt;Increment&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+</section>
+
+<section>
+    <h2>Student Registration Form</h2>
+    <pre><code class="jsx">import { useState } from "react";
+
+function App(){
+    const [student, setStudent] = useState({
+        name: "",
+        rollNo: "",
+        branch: "",
+        batch: ""
+    });
+
+    function handleChange({key, value}){
+        setStudent((prev) =&gt; ({
+            ...prev,
+            [key]: value
+        }))
+    }
+
+    function handleSubmit(){
+        console.log("Student Registered:", student);
+    }</code></pre>
+</section>
+
+<section>
+    <h2>Form JSX</h2>
+    <pre><code class="jsx">    return (
+        &lt;&gt;
+            &lt;h1&gt;Student Registration&lt;/h1&gt;
+            &lt;input type="text" placeholder="name" 
+                   value={student.name} 
+                   onChange={(e) =&gt; handleChange({key: "name", value: e.target.value})} /&gt;&lt;br /&gt;
+            &lt;input type="text" placeholder="rollNo" 
+                   value={student.rollNo} 
+                   onChange={(e) =&gt; handleChange({key: "rollNo", value: e.target.value})} /&gt;&lt;br /&gt;
+            &lt;input type="text" placeholder="branch" 
+                   value={student.branch} 
+                   onChange={(e) =&gt; handleChange({key: "branch", value: e.target.value})} /&gt;&lt;br /&gt;
+            &lt;input type="text" placeholder="batch" 
+                   value={student.batch} 
+                   onChange={(e) =&gt; handleChange({key: "batch", value: e.target.value})} /&gt;&lt;br /&gt;
+            &lt;button onClick={handleSubmit}&gt;Register&lt;/button&gt;
+        &lt;/&gt;
+    )
+}</code></pre>
+</section>
+
+<section data-background-color="#34495e">
+    <h2 style="color: white;">useEffect Hook</h2>
+    <p style="color: white;"><code>useEffect</code> lets you run some code automatically after React has updated the screen.</p>
+    <p style="color: white;">Think of <code>useEffect</code> like an <strong>alarm clock</strong>:</p>
+    <ul style="color: white;">
+        <li>You tell it when to ring (the dependency array)</li>
+        <li>When the condition happens, it runs the code you gave it</li>
+    </ul>
+</section>
+
+<section>
+    <h2>useEffect Syntax</h2>
+    <pre><code class="jsx">// import useEffect
+import { useEffect } from 'react';
+
+// you can use it like below
+useEffect(() =&gt; {
+    // Your side effect code here
+}, [dependencies]);</code></pre>
+</section>
+
+<section>
+    <h2>Counter with useEffect</h2>
+    <pre><code class="jsx">import { useState, useEffect } from "react";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() =&gt; {
+    console.log("Count changed:", count);
+  }, [count]); // triggers when count changes
+
+  return (
+    &lt;div style={{ display: "flex", alignItems: "center", flexDirection: "column" }}&gt;
+      &lt;h2&gt;{count}&lt;/h2&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increase&lt;/button&gt;
+        &lt;button onClick={() =&gt; setCount(count - 1)}&gt;Decrease&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};</code></pre>
+</section>
+
+<section data-background-color="#2c3e50">
+    <h1 style="color: white;">Thank You!</h1>
+    <h3 style="color: white;">Questions?</h3>
+    <p style="color: white;">Ready to build amazing React applications! 🚀</p>
+</section>

@@ -1,3 +1,8 @@
+---
+layout: slides
+title: "React Workshop"
+---
+
 # Introduction to React
 
 ## Building Modern Web Apps

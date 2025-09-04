@@ -1,0 +1,24 @@
+theme: minima
+plugins:
+  - jekyll-feed
+
+title: React 101 - Introduction to React
+description: A comprehensive introduction to React for building modern web applications
+
+markdown: kramdown
+highlighter: rouge
+
+baseurl: "/React_101"
+url: "https://yuvraj-rathod-1202.github.io"
+
+collections:
+  slides:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "slides"
+    values:
+      layout: "slide"
