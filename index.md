@@ -1,6 +1,7 @@
 ---
 layout: default
-title: React 101 - Introduction to React
+title: Introduction to React
+permalink: /
 ---
 
 # React 101 - Introduction to React
@@ -44,6 +45,4 @@ Welcome to the comprehensive introduction to React! This presentation covers eve
 6. **Event Handling** - Responding to user interactions
 7. **Side Effects** - Using useEffect for API calls and more
 
----
 
-*This presentation is built with Jekyll and Reveal.js for an interactive learning experience.*
