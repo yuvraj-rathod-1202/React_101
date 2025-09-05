@@ -91,18 +91,6 @@ git push origin feature/your-feature-name
 - **Title**: Be descriptive (e.g., "Add timer functionality to quiz")
 - **Description**: Explain what you changed and why
 
-## 🔧 Available Scripts
-
-### `npm start`
-Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
-
-### `npm test`
-Launches the test runner
-
-### `npm run build`
-Builds the app for production
-
-
 ## 🌟 Show Your Support
 
 If you found this helpful, please ⭐ star this repository and Follow [Yuvraj Rathod](https://github.com/yuvraj-rathod-1202)!
