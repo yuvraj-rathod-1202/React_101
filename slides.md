@@ -1,8 +1,8 @@
-<!-- ---
+---
 layout: default
 title: ""
 permalink: /slides/
---- -->
+---
 
 # Introduction to React
 <!-- .slide: data-background-color="#3498db" style="color: white;" -->
