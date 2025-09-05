@@ -68,7 +68,7 @@ Think of it like **Lego bricks** for websites. You build small, reusable pieces 
 
 ```jsx
 function WelcomeMessage() { // component of React
-  return <h1>Welcome to React!</h1>;
+  return <h1>Welcome to React!</h1>; // return HTML like structure called JSX
 }
 ```
 
@@ -77,6 +77,7 @@ function WelcomeMessage() { // component of React
 ```jsx
 function HelloMessage() { // name of component should start with an uppercase letter
   const name = "Yuvraj";
+  // return single parent element
   return (
     <>
       <h1>Hello, {name}!</h1>
@@ -105,11 +106,12 @@ function App() {
 import './BestProf.css';
 
 function BestProf() {
-    return <h2 className="best-prof">Professor Anirban is the best!</h2>;
+    return <h2 className="best-prof">Professor Nipun is the best!</h2>;
 }
 ```
 
 ```css
+/* BestProf.css */
 .best-prof {
     color: blue;
     font-weight: bold;
@@ -122,7 +124,7 @@ function BestProf() {
 import './BestProf.css';
 
 export default function BestProf() {
-    return <h2 className="best-prof">Professor Anirban is the best!</h2>;
+    return <h2 className="best-prof">Professor Nipun is the best!</h2>;
 }
 ```
 
@@ -133,7 +135,7 @@ Or
 import './BestProf.css';
 
 function BestProf() {
-    return <h2 className="best-prof">Professor Anirban is the best!</h2>;
+    return <h2 className="best-prof">Professor Nipun is the best!</h2>;
 }
 export default BestProf;
 ```
@@ -167,7 +169,7 @@ Props (short for "properties") are a way to pass data from a parent component to
 function App() {
     return (
         <div>
-            <BestProf name="Anirban" />
+            <BestProf name="Nipun" />
         </div>
     );
 }
@@ -240,6 +242,8 @@ function App() {
 }
 ```
 
+You can also use `ternary(?:)` or `Logical AND(&&)` operators for conditional rendering.
+
 ### List Rendering
 
 ```jsx
@@ -279,8 +283,6 @@ function App(){
     );
 }
 ```
-
-You can also use `ternary(?:)` or `Logical AND(&&)` operators for conditional rendering.
 
 ---
 
