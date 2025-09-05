@@ -51,9 +51,9 @@ Before starting this workshop, make sure you have:
 - Conditional and list rendering
 - Side effects with useEffect
 
-<!-- <a href="/React_101/slides" class="btn">Start Presentation</a> -->
+<a href="/React_101/slides" class="btn">Start Presentation</a> -->
 
-<!-- ## Topics Covered
+## Topics Covered
 
 1. **Introduction to React** - Understanding the library and its ecosystem
 2. **Development Setup** - Getting your environment ready
@@ -61,6 +61,6 @@ Before starting this workshop, make sure you have:
 4. **Props** - Passing data between components
 5. **State Management** - Managing component state with useState
 6. **Event Handling** - Responding to user interactions
-7. **Side Effects** - Using useEffect for API calls and more -->
+7. **Side Effects** - Using useEffect for API calls and more
 
 
