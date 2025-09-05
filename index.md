@@ -51,7 +51,7 @@ Before starting this workshop, make sure you have:
 - Conditional and list rendering
 - Side effects with useEffect
 
-<a href="/React_101/slides" class="btn">Start Presentation</a> -->
+<a href="/React_101/slides" class="btn">Start Presentation</a>
 
 ## Topics Covered
 
